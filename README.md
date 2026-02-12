@@ -6,6 +6,8 @@ Each project has its own notebook and sometimes an additional report on the `rep
 
 The goal of this repo is to build a small, coherent portfolio of end‑to‑end ML experiments, rather than isolated scripts or competition submissions, and to use each project as a way to systematically learn and try out new ideas in computational intelligence and deep learning.
 
+> **Note:** This repository does NOT include any generative AI projects (such as LLMs or image generation). Those are tracked separately in dedicated repositories and notebooks.
+
 ---
 
 ## Projects
