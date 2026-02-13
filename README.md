@@ -44,3 +44,24 @@ The notebook includes:
 
 
 > 🔗 Kaggle notebook: [here](https://www.kaggle.com/code/tommasofacchin/symbolic-regression-energy-efficiency)
+
+---
+
+### 3. Stacking for Heart Disease Prediction (Logistic regression + XGBoost)
+
+In this project I work on the **“[Predicting Heart Disease](https://www.kaggle.com/competitions/playground-series-s6e2)”** Kaggle Playground competition, where the goal is to predict the probability of heart diseaese.  
+
+The central idea is to use a **stacking approach**, where a Logistic Regression model is used both as a baseline and as an additional learned feature for XGBoost.
+
+After a simple preprocessing pipeline (standardization and one-hot encoding) :
+- I trained a **Logistic Regression** model, tuning the regularization parameter `C` with Stratified K‑Fold and ROC AUC.
+- I generated **out‑of‑fold (OOF) predictions** from Logistic Regression and add them as a new feature (`logit_oof`) to the training data, and as a corresponding probability feature to the validation and test sets.
+- I trained **XGBoost**:
+  - first on the original features only,
+  - then on the stacked feature set (original features + `logit_oof`),
+  - compare the models using ROC AUC on the validation set and examine ROC + calibration plots.
+  
+> 🔗 Kaggle notebook: [here](https://www.kaggle.com/code/tommasofacchin/pred-heart-disease-stacking-logistic-xgbost)
+
+
+
